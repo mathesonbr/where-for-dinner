@@ -11,9 +11,9 @@
   "enableSecurity" : false,
   "numRabbitMQClusterNodes" : 1,
   "projectName" : "where-for-dinner",
-  "rabbitMQName" : "rmq-where-for-dinner",
-  "serviceNamespace" : "service-instances",
-  "workloadNamespace" : "dev-tap"
+  "rabbitMQName" : "wfd-rmq",
+  "serviceNamespace" : "wfd-service-instances",
+  "workloadNamespace" : "wfd-workloads"
 }
 ```
 ## Log
@@ -351,8 +351,8 @@
 ┃ ┃ ┃ ┃ ┃ ┃ Debug where-for-dinner-ui/src/reportWebVitals.js didn't match [**/templates/workloads.yaml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┗ Debug where-for-dinner-ui/src/setupTests.js didn't match [**/templates/workloads.yaml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.merge.transformations[0].sources[1].<combo>.transformations[1] (YTT)
-┃ ┃ ┃ ┃ ┃ ┃ Debug Wrote values file with json content:   {"devDefaultAccountUsername":"where-for-dinner","bsGitBranch":"main","artifactVersion":"0.0.1-beta","bsGitRepository":"github.com?owner=mathesonbr%40vmware.com&repo=where-for-dinner","dbName":"db-where-for-dinner","dbType":"h2","rabbitMQName":"rmq-where-for-dinner","devDefaultAccountPassword":"letseat","appSSOIssuerURI":"http://authserver.<domainname>","enableSecurity":false,"createRabbitMQCluster":true,"appSSOName":"appsso-where-for-dinner","createResourceClaim":true,"numRabbitMQClusterNodes":1,"enableDefaultDevAccount":true,"artifactId":"where-for-dinner","createDBInstance":true,"serviceNamespace":"service-instances","projectName":"where-for-dinner","workloadNamespace":"dev-tap","appSSORedirectURI":"http://where-for-dinner.<domain name>/login/oauth2/code/sso"}
-┃ ┃ ┃ ┃ ┃ ┗  Info Shelling out to YTT with args: [ytt, -f, /tmp/ytt-input7490608026402901874, --data-values-file, /tmp/accelerator-options17644295289526769556.json, --output-files, /tmp/ytt-output12605581951311887297]
+┃ ┃ ┃ ┃ ┃ ┃ Debug Wrote values file with json content:   {"devDefaultAccountUsername":"where-for-dinner","bsGitBranch":"main","artifactVersion":"0.0.1-beta","bsGitRepository":"github.com?owner=mathesonbr%40vmware.com&repo=where-for-dinner","dbName":"db-where-for-dinner","dbType":"h2","rabbitMQName":"wfd-rmq","devDefaultAccountPassword":"letseat","appSSOIssuerURI":"http://authserver.<domainname>","enableSecurity":false,"createRabbitMQCluster":true,"appSSOName":"appsso-where-for-dinner","createResourceClaim":true,"numRabbitMQClusterNodes":1,"enableDefaultDevAccount":true,"artifactId":"where-for-dinner","createDBInstance":true,"serviceNamespace":"wfd-service-instances","projectName":"where-for-dinner","workloadNamespace":"wfd-workloads","appSSORedirectURI":"http://where-for-dinner.<domain name>/login/oauth2/code/sso"}
+┃ ┃ ┃ ┃ ┃ ┗  Info Shelling out to YTT with args: [ytt, -f, /tmp/ytt-input17849356816586078346, --data-values-file, /tmp/accelerator-options1078281588554615277.json, --output-files, /tmp/ytt-output7347045666300430732]
 ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.merge.transformations[0].sources[1].<combo>.transformations[2] (RewritePath)
 ┃ ┃ ┃ ┃ ┗ ┗ Debug Path 'templates/workloads.yaml' matched 'templates/workloads.yaml' with groups {g0=templates/workloads.yaml} and was rewritten to 'config/developer/workloads.yaml'
 ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.merge.transformations[0].sources[2] (Combo)
@@ -521,8 +521,8 @@
 ┃ ┃ ┃ ┃ ┃ ┃ Debug where-for-dinner-ui/src/reportWebVitals.js didn't match [**/rmqCluster.yaml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┗ Debug where-for-dinner-ui/src/setupTests.js didn't match [**/rmqCluster.yaml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.merge.transformations[0].sources[2].<combo>.transformations[1] (YTT)
-┃ ┃ ┃ ┃ ┃ ┃ Debug Wrote values file with json content:   {"devDefaultAccountUsername":"where-for-dinner","bsGitBranch":"main","artifactVersion":"0.0.1-beta","bsGitRepository":"github.com?owner=mathesonbr%40vmware.com&repo=where-for-dinner","dbName":"db-where-for-dinner","dbType":"h2","rabbitMQName":"rmq-where-for-dinner","devDefaultAccountPassword":"letseat","appSSOIssuerURI":"http://authserver.<domainname>","enableSecurity":false,"createRabbitMQCluster":true,"appSSOName":"appsso-where-for-dinner","createResourceClaim":true,"numRabbitMQClusterNodes":1,"enableDefaultDevAccount":true,"artifactId":"where-for-dinner","createDBInstance":true,"serviceNamespace":"service-instances","projectName":"where-for-dinner","workloadNamespace":"dev-tap","appSSORedirectURI":"http://where-for-dinner.<domain name>/login/oauth2/code/sso"}
-┃ ┃ ┃ ┃ ┃ ┗  Info Shelling out to YTT with args: [ytt, -f, /tmp/ytt-input16260500919187818198, --data-values-file, /tmp/accelerator-options16523805256024654560.json, --output-files, /tmp/ytt-output15624748954713233658]
+┃ ┃ ┃ ┃ ┃ ┃ Debug Wrote values file with json content:   {"devDefaultAccountUsername":"where-for-dinner","bsGitBranch":"main","artifactVersion":"0.0.1-beta","bsGitRepository":"github.com?owner=mathesonbr%40vmware.com&repo=where-for-dinner","dbName":"db-where-for-dinner","dbType":"h2","rabbitMQName":"wfd-rmq","devDefaultAccountPassword":"letseat","appSSOIssuerURI":"http://authserver.<domainname>","enableSecurity":false,"createRabbitMQCluster":true,"appSSOName":"appsso-where-for-dinner","createResourceClaim":true,"numRabbitMQClusterNodes":1,"enableDefaultDevAccount":true,"artifactId":"where-for-dinner","createDBInstance":true,"serviceNamespace":"wfd-service-instances","projectName":"where-for-dinner","workloadNamespace":"wfd-workloads","appSSORedirectURI":"http://where-for-dinner.<domain name>/login/oauth2/code/sso"}
+┃ ┃ ┃ ┃ ┃ ┗  Info Shelling out to YTT with args: [ytt, -f, /tmp/ytt-input300291361009403860, --data-values-file, /tmp/accelerator-options12379670083550721390.json, --output-files, /tmp/ytt-output3030171698081944407]
 ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.merge.transformations[0].sources[2].<combo>.transformations[2] (RewritePath)
 ┃ ┃ ┃ ┃ ┗ ┗ Debug Path 'templates/rmqCluster.yaml' matched 'templates/rmqCluster.yaml' with groups {g0=templates/rmqCluster.yaml} and was rewritten to 'config/service-operator/rmqCluster.yaml'
 ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.merge.transformations[0].sources[3] (Combo)
@@ -694,8 +694,8 @@
 ┃ ┃ ┃ ┃ ┃ ┃ Debug where-for-dinner-ui/src/reportWebVitals.js didn't match [**/rmqResourceClaim.yaml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┗ Debug where-for-dinner-ui/src/setupTests.js didn't match [**/rmqResourceClaim.yaml] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.merge.transformations[0].sources[4].<combo>.transformations[1] (YTT)
-┃ ┃ ┃ ┃ ┃ ┃ Debug Wrote values file with json content:   {"devDefaultAccountUsername":"where-for-dinner","bsGitBranch":"main","artifactVersion":"0.0.1-beta","bsGitRepository":"github.com?owner=mathesonbr%40vmware.com&repo=where-for-dinner","dbName":"db-where-for-dinner","dbType":"h2","rabbitMQName":"rmq-where-for-dinner","devDefaultAccountPassword":"letseat","appSSOIssuerURI":"http://authserver.<domainname>","enableSecurity":false,"createRabbitMQCluster":true,"appSSOName":"appsso-where-for-dinner","createResourceClaim":true,"numRabbitMQClusterNodes":1,"enableDefaultDevAccount":true,"artifactId":"where-for-dinner","createDBInstance":true,"serviceNamespace":"service-instances","projectName":"where-for-dinner","workloadNamespace":"dev-tap","appSSORedirectURI":"http://where-for-dinner.<domain name>/login/oauth2/code/sso"}
-┃ ┃ ┃ ┃ ┃ ┗  Info Shelling out to YTT with args: [ytt, -f, /tmp/ytt-input7749609498560530268, --data-values-file, /tmp/accelerator-options6311488074195137078.json, --output-files, /tmp/ytt-output6653050231531682994]
+┃ ┃ ┃ ┃ ┃ ┃ Debug Wrote values file with json content:   {"devDefaultAccountUsername":"where-for-dinner","bsGitBranch":"main","artifactVersion":"0.0.1-beta","bsGitRepository":"github.com?owner=mathesonbr%40vmware.com&repo=where-for-dinner","dbName":"db-where-for-dinner","dbType":"h2","rabbitMQName":"wfd-rmq","devDefaultAccountPassword":"letseat","appSSOIssuerURI":"http://authserver.<domainname>","enableSecurity":false,"createRabbitMQCluster":true,"appSSOName":"appsso-where-for-dinner","createResourceClaim":true,"numRabbitMQClusterNodes":1,"enableDefaultDevAccount":true,"artifactId":"where-for-dinner","createDBInstance":true,"serviceNamespace":"wfd-service-instances","projectName":"where-for-dinner","workloadNamespace":"wfd-workloads","appSSORedirectURI":"http://where-for-dinner.<domain name>/login/oauth2/code/sso"}
+┃ ┃ ┃ ┃ ┃ ┗  Info Shelling out to YTT with args: [ytt, -f, /tmp/ytt-input7914844780298940716, --data-values-file, /tmp/accelerator-options6917051625209995974.json, --output-files, /tmp/ytt-output12114745370536851942]
 ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.merge.transformations[0].sources[4].<combo>.transformations[2] (RewritePath)
 ┃ ┃ ┃ ┃ ┗ ┗ Debug Path 'templates/rmqResourceClaim.yaml' matched 'templates/rmqResourceClaim.yaml' with groups {g0=templates/rmqResourceClaim.yaml} and was rewritten to 'config/app-operator/rmqResourceClaim.yaml'
 ┃ ┃ ┃ ┃ ┏ engine.transformations[0].validated.merge.transformations[0].sources[5] (Combo)
