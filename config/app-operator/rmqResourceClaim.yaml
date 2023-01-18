@@ -46,7 +46,7 @@ apiVersion: services.apps.tanzu.vmware.com/v1alpha1
 kind: ResourceClaimPolicy
 metadata:
   name: rabbitmqcluster-cross-namespace
-  namespace: wfd-service-instances
+  namespace: dev-tap
 spec:
   consumingNamespaces:
   - '*'
@@ -57,11 +57,11 @@ spec:
 apiVersion: services.apps.tanzu.vmware.com/v1alpha1
 kind: ResourceClaim
 metadata:
-  name: wfd-rmq
-  namespace: wfd-workloads
+  name: dev-tap
+  namespace: dev-tap
 spec:
   ref:
     apiVersion: rabbitmq.com/v1beta1
     kind: RabbitmqCluster
-    name: wfd-rmq
-    namespace: wfd-service-instances
+    name: dev-tap
+    namespace: dev-tap
