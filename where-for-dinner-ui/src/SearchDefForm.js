@@ -5,9 +5,8 @@ import axios from "axios";
 
 function SearchDefForm(props)
 {
-  const [startTime,setStartTime] = useState(new Date().now())
-  const [endTime,setEndTime] = useState(new Date().now() + new Date(7200))
-
+  const [startTime,setStartTime] = useState(Date.now());
+  const [endTime,setEndTime] = useState(Date.now() + new Date (7200));
   const searchNameRef = useRef(null);
   const zipCodeRef = useRef(null);
   const radiusRef = useRef(null);
