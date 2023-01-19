@@ -4,6 +4,7 @@ metadata:
   name: where-for-dinner-ui
   annotations:
     "backstage.io/kubernetes-label-selector": "app.kubernetes.io/part-of=where-for-dinner-ui"
+    has-tests: true
 spec:
   type: service
   lifecycle: experimental
